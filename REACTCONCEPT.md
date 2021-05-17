@@ -1,4 +1,6 @@
-1. Reconciliation: 
+# REACT CONCEPTS
+
+## Reconciliation: 
 Reconciliation is the process through which React updates the DOM. When a component’s state changes, React has to calculate if it is necessary to update the DOM. It does this by creating a virtual DOM and comparing it with the current DOM. 
 
 
