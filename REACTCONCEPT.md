@@ -8,26 +8,26 @@ Reconciliation is the process through which React updates the DOM. When a compon
 React updates the virtual DOM tree. Once the virtual DOM has been updated, React then compares the current version of the virtual DOM with the previous version of the virtual DOM. This process is called “diffing”.
 
 
-Elements Of Different Types: 
+**Elements Of Different Types:**
 
 Whenever the root elements have different types, React will tear down the old tree and build the new tree from scratch. Going from <a> to <img>, or from <Article> to <Comment>, or from <Button> to <div> - any of those will lead to a full rebuild.
 
 
-DOM Elements Of The Same Type: 
+**DOM Elements Of The Same Type:**
 
 When comparing two React DOM elements of the same type, React looks at the attributes of both, keeps the same underlying DOM node, and only updates the changed attributes.
 
-Component Elements Of The Same Type: 
+**Component Elements Of The Same Type:** 
 
 React updates the props of the underlying component instance to match the new element.
 
 
-Recursing On Children:
+**Recursing On Children:**
 
 when recursing on the children of a DOM node, React just iterates over both lists of children at the same time and generates a mutation whenever there’s a difference.
 
 
-Keys:
+**Keys:**
 
 React supports a key attribute. When children have keys, React uses the key to match children in the original tree with children in the subsequent tree. 
 
@@ -39,24 +39,24 @@ React Fiber is a completely backward-compatible rewrite of the old reconciler. T
 Binary Search tree:
 In a binary search tree, each node either has zero, one or two children. The child on the left is called the left child, and the child on the right is the right child. In a binary search tree, the child on the left must be smaller than the child on the right.
 
-Stack:
+**Stack:**
 In stack the last item you pushed on the stack will be the first one removed. This is referred to as last-in, first-out (LIFO). 
 
-Queue:
+**Queue:**
 The key difference between the stack and the queue is that the queue is first-in, first-out (FIFO), the first item inserted in the array will be removed first.
 
-Linked List:
+**Linked List:**
 Linked lists organize items sequentially, with each item pointing to the next item.
 
-Hash table:
+**Hash table:**
 A hash table is a data structure that implements an associative array, which means it maps keys to values. A JavaScript object is a hash table, as it stores key-value pairs.
 
 ## Physical DOM vs Virtual DOM
     
-Physical DOM:
+**Physical DOM:**
 The HTML you write is parsed by the browser and turned into the DOM. The DOM represents documents in the page as nodes and objects.
 
-VIrtual DOM:
+**Virtual DOM:**
 In React, for every DOM object, there is a corresponding “virtual DOM object.” A virtual DOM object is a representation of a DOM object, like a lightweight copy.A virtual DOM object has the same properties as a real DOM object, but it lacks the real thing’s power to directly change what’s on the screen.
 
 
@@ -74,31 +74,31 @@ JavaScript provides different data types to hold different types of values. Ther
 Primitive data type
 Non-primitive (reference) data type
 There are five types of primitive data types in JavaScript. They are as follows:
-String
+**String**
     represents sequence of characters e.g. "hello”
 
-Number
+**Number**
     represents numeric values e.g. 100
 
-Boolean
+**Boolean**
     represents boolean value either false or true
 
-Undefined
+**Undefined**
     represents undefined value
 
-Null
+**Null**
     represents null i.e. no value at all
 
 
 The non-primitive data types are as follows:
 
-Object
+**Object**
     represents instance through which we can access members
 
-Array
+**Array**
     represents group of similar values
 
-RegExp
+**RegExp**
     represents regular expression
 
 
