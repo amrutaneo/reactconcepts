@@ -51,7 +51,7 @@ In a binary search tree, each node either has zero, one or two children. The chi
     Hash table:
     A hash table is a data structure that implements an associative array, which means it maps keys to values. A JavaScript object is a hash table, as it stores key-value pairs.
 
-##Physical DOM vs Virtual DOM
+## Physical DOM vs Virtual DOM
     
     Physical DOM:
     The HTML you write is parsed by the browser and turned into the DOM. The DOM represents documents in the page as nodes and objects.
@@ -60,16 +60,16 @@ In a binary search tree, each node either has zero, one or two children. The chi
     In React, for every DOM object, there is a corresponding “virtual DOM object.” A virtual DOM object is a representation of a DOM object, like a lightweight copy.A virtual DOM object has the same properties as a real DOM object, but it lacks the real thing’s power to directly change what’s on the screen.
 
 
-##Interview Questions (11-05-2021)
-    ###1.React JS vs Angular
+## Interview Questions (11-05-2021)
+### 1.React JS vs Angular
 
 	AngularJS is a structural framework for developing dynamic web apps, whereas React is a javascript library that allows you to build UI components.
     https://www.guru99.com/react-vs-angular-key-difference.html#:~:text=KEY%20DIFFERENCE,React%20is%20based%20on%20Javascript.
 
-    ###2. React Component Lifecycle
+    ### 2. React Component Lifecycle
     https://reactjs.org/docs/react-component.html
 
-    ###3. Data type in Javascript
+### 3. Data type in Javascript
     JavaScript provides different data types to hold different types of values. There are two types of data types in JavaScript.
         Primitive data type
             Non-primitive (reference) data type
@@ -97,7 +97,7 @@ In a binary search tree, each node either has zero, one or two children. The chi
                 
                 Array
                     represents group of similar values
-                    
+
                 RegExp
                     represents regular expression
 
