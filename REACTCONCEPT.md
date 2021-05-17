@@ -4,104 +4,102 @@
 Reconciliation is the process through which React updates the DOM. When a component’s state changes, React has to calculate if it is necessary to update the DOM. It does this by creating a virtual DOM and comparing it with the current DOM. 
 
 
-2. Diffing Algorithm:
+## Diffing Algorithm:
 React updates the virtual DOM tree. Once the virtual DOM has been updated, React then compares the current version of the virtual DOM with the previous version of the virtual DOM. This process is called “diffing”.
 
 
-Elements Of Different Types: 
+    Elements Of Different Types: 
 
-Whenever the root elements have different types, React will tear down the old tree and build the new tree from scratch. Going from <a> to <img>, or from <Article> to <Comment>, or from <Button> to <div> - any of those will lead to a full rebuild.
-
-
-DOM Elements Of The Same Type: 
-
-When comparing two React DOM elements of the same type, React looks at the attributes of both, keeps the same underlying DOM node, and only updates the changed attributes.
-
-Component Elements Of The Same Type: 
-
-React updates the props of the underlying component instance to match the new element.
+    Whenever the root elements have different types, React will tear down the old tree and build the new tree from scratch. Going from <a> to <img>, or from <Article> to <Comment>, or from <Button> to <div> - any of those will lead to a full rebuild.
 
 
-Recursing On Children:
+    DOM Elements Of The Same Type: 
 
-when recursing on the children of a DOM node, React just iterates over both lists of children at the same time and generates a mutation whenever there’s a difference.
+    When comparing two React DOM elements of the same type, React looks at the attributes of both, keeps the same underlying DOM node, and only updates the changed attributes.
+
+    Component Elements Of The Same Type: 
+
+    React updates the props of the underlying component instance to match the new element.
 
 
-Keys:
+    Recursing On Children:
 
-React supports a key attribute. When children have keys, React uses the key to match children in the original tree with children in the subsequent tree. 
+    when recursing on the children of a DOM node, React just iterates over both lists of children at the same time and generates a mutation whenever there’s a difference.
 
 
-3. React Fibre
+    Keys:
+
+    React supports a key attribute. When children have keys, React uses the key to match children in the original tree with children in the subsequent tree. 
+
+
+## React Fibre
 React Fiber is a completely backward-compatible rewrite of the old reconciler. This new reconciliation algorithm from React is called Fiber Reconciler. The main goals of the Fiber reconciler are incremental rendering, better or smoother rendering of UI animations and gestures, and responsiveness of the user interactions.
-4. Data structure
+
+## Data structure
 Binary Search tree:
 In a binary search tree, each node either has zero, one or two children. The child on the left is called the left child, and the child on the right is the right child. In a binary search tree, the child on the left must be smaller than the child on the right.
 
-Stack:
-In stack the last item you pushed on the stack will be the first one removed. This is referred to as last-in, first-out (LIFO). 
+    Stack:
+    In stack the last item you pushed on the stack will be the first one removed. This is referred to as last-in, first-out (LIFO). 
 
-Queue:
-The key difference between the stack and the queue is that the queue is first-in, first-out (FIFO), the first item inserted in the array will be removed first.
+    Queue:
+    The key difference between the stack and the queue is that the queue is first-in, first-out (FIFO), the first item inserted in the array will be removed first.
 
-Linked List:
-Linked lists organize items sequentially, with each item pointing to the next item.
-Hash table:
-A hash table is a data structure that implements an associative array, which means it maps keys to values. A JavaScript object is a hash table, as it stores key-value pairs.
+    Linked List:
+    Linked lists organize items sequentially, with each item pointing to the next item.
 
-5.Physical DOM vs Virtual DOM
-Physical DOM:
+    Hash table:
+    A hash table is a data structure that implements an associative array, which means it maps keys to values. A JavaScript object is a hash table, as it stores key-value pairs.
+
+##Physical DOM vs Virtual DOM
+    
+    Physical DOM:
+    The HTML you write is parsed by the browser and turned into the DOM. The DOM represents documents in the page as nodes and objects.
+
+    VIrtual DOM:
+    In React, for every DOM object, there is a corresponding “virtual DOM object.” A virtual DOM object is a representation of a DOM object, like a lightweight copy.A virtual DOM object has the same properties as a real DOM object, but it lacks the real thing’s power to directly change what’s on the screen.
 
 
-The HTML you write is parsed by the browser and turned into the DOM. The DOM represents documents in the page as nodes and objects.
+##Interview Questions (11-05-2021)
+    ###1.React JS vs Angular
 
-VIrtual DOM:
-
-In React, for every DOM object, there is a corresponding “virtual DOM object.” A virtual DOM object is a representation of a DOM object, like a lightweight copy.A virtual DOM object has the same properties as a real DOM object, but it lacks the real thing’s power to directly change what’s on the screen.
-
-
-Interview Questions (11-05-2021)
- 1.React JS vs Angular
 	AngularJS is a structural framework for developing dynamic web apps, whereas React is a javascript library that allows you to build UI components.
-https://www.guru99.com/react-vs-angular-key-difference.html#:~:text=KEY%20DIFFERENCE,React%20is%20based%20on%20Javascript.
+    https://www.guru99.com/react-vs-angular-key-difference.html#:~:text=KEY%20DIFFERENCE,React%20is%20based%20on%20Javascript.
 
-2. React Component Lifecycle
+    ###2. React Component Lifecycle
+    https://reactjs.org/docs/react-component.html
 
+    ###3. Data type in Javascript
+    JavaScript provides different data types to hold different types of values. There are two types of data types in JavaScript.
+        Primitive data type
+            Non-primitive (reference) data type
+                There are five types of primitive data types in JavaScript. They are as follows:
+                String
+                    represents sequence of characters e.g. "hello”
 
-https://reactjs.org/docs/react-component.html
+                Number
+                    represents numeric values e.g. 100
 
-3. Data type in Javascript
-JavaScript provides different data types to hold different types of values. There are two types of data types in JavaScript.
-Primitive data type
-Non-primitive (reference) data type
-There are five types of primitive data types in JavaScript. They are as follows:
+                Boolean
+                    represents boolean value either false or true
 
+                Undefined
+                    represents undefined value
 
-Data Type
-Description
-String
-represents sequence of characters e.g. "hello”
-Number
-represents numeric values e.g. 100
-Boolean
-represents boolean value either false or true
-Undefined
-represents undefined value
-Null
-represents null i.e. no value at all
+                Null
+                    represents null i.e. no value at all
 
 
-The non-primitive data types are as follows:
+            The non-primitive data types are as follows:
 
-
-Data Type
-Description
-Object
-represents instance through which we can access members
-Array
-represents group of similar values
-RegExp
-represents regular expression
+                Object
+                    represents instance through which we can access members
+                
+                Array
+                    represents group of similar values
+                    
+                RegExp
+                    represents regular expression
 
 
 4. Purpose of Higher Order Component
